@@ -16,10 +16,10 @@ from="ubuntu"
 
 # This is the argument of 'docker pull', 'docker push', etc. for the image
 # we are building.
-docker_url="mjambon/ocaml:ubuntu"
+docker_url="kakadu18/ocaml:fp2020"
 
 # User to create and use. If it already exists, we'll try to use it.
-user="user"
+user="buildbot"
 
 # Extra packages to be installed by the native package manager.
 extra_packages="$extra_deb_packages"

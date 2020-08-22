@@ -13,5 +13,9 @@ extra_deb_packages="
 # The collection of opam packages we want to install. Go wild.
 opam_packages="
   dune
+  ppx_inline_test
+  ppx_expect
   utop
+  ocamlformat
+  base
 "

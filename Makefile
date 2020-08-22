@@ -7,7 +7,7 @@
 ifndef SELECTED_CONFIGS
   # The list of configuration files, one per image that you want to build
   # when running 'make' and 'make push'.
-  SELECTED_CONFIGS = configs/alpine.sh
+  SELECTED_CONFIGS = configs/ubuntu.sh
 endif
 export SELECTED_CONFIGS
 
