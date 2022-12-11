@@ -6,4 +6,6 @@
 set -eu
 
 packages=$(echo $* | sed -e 's/,/ /g')
+#opam --version
+#opam install -y $packages --depext-only &&
 opam install -y $packages

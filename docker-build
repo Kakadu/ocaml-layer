@@ -65,6 +65,10 @@ build() {
       extra_build_options+=( -t "$url" )
     done
 
+    if [[ -e ./postinstall.sh ]]; then
+      pwd
+      cp ./postinstall.sh tmp -vi
+    fi
     (
       cd tmp
       ./create-dockerfile -o Dockerfile \
