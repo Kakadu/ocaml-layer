@@ -8,7 +8,7 @@ extra_apk_packages="
 
 # Ubuntu
 extra_deb_packages="
-  pkg-config npm
+  pkg-config npm nasm
 "
 
 # The collection of opam packages we want to install. Go wild.
