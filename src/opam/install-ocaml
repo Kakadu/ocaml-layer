@@ -25,12 +25,11 @@ opam switch create "$@"
 
 cat >> ~/.bashrc <<"EOF"
 # From https://github.com/mjambon/ocaml-layer
-echo 'Running "eval $(opam env)", which initializes PATH and other variables.'
-echo
-echo "In scripts and dockerfiles, don't forget to run your commands as"
+echo 'Не забывайте либо запустить "eval $(opam env)", Что инициализирует пути и другие переменные.'
+echo 'Или запускать все команды приписывая спереди opam exec --. '
+echo "Например:"
 echo '  opam exec -- COMMAND'
-echo 'or equivalently as'
-echo '  eval $(opam env) && COMMAND'
+echo ''
 echo
 eval $(opam env)
 EOF
