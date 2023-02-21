@@ -10,17 +10,20 @@ extra_apk_packages="
 extra_deb_packages="
   pkg-config
   rlwrap
-  libgmp-dev libipc-system-simple-perl libstring-shellquote-perl
+  libgmp-dev
+  llvm-14 cmake libffi-dev llvm-14-dev
 "
 
 # The collection of opam packages we want to install. Go wild.
 opam_packages="
   dune.3.6.1
-  ocamlfind
-  mtime.1.4.0
-  GT.0.5.1
-  ppxlib.0.26.0
-  ostap
+  ppxlib
   ppx_expect
-  ocamlformat.0.24.1
+  ppx_show
+  ppx_inline_test
+	ppx_blob
+	angstrom
+  ctypes
+  ctypes-foreign
+  llvm.14.0.6
 "
