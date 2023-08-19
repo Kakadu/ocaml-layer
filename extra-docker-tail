@@ -1,7 +1,5 @@
-RUN echo "Manual commands in the end"
-RUN npm config set prefix '~/.local/'
-RUN npm install -g jscpd
-
-RUN echo "TODO add ppx_show as a dependecy for reviewer"
-RUN opam pin add reviewer https://github.com/Kakadu/zanuda.git --yes
-RUN opam clean --yes
+# Next command is here to avoid the following error
+#   raco setup: docs failure: query-exec: unable to open the database file
+RUN sudo raco setup --doc-index --force-user-docs
+RUN raco pkg install benchmark pretty-format
+RUN raco pkg show
