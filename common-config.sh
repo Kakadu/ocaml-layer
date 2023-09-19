@@ -11,34 +11,32 @@ extra_deb_packages="
   pkg-config
   libgmp-dev
   libpcre3-dev
-  xdot
-  python3-distutils
-  racket racket-doc libssl-dev openjdk-17-jdk
+  libpcre2-dev
   autoconf
+  xdot
   bc
+  ncdu
 "
 
 # The collection of opam packages we want to install. Go wild.
 opam_packages="
   ocamlfind
-  dune.3.9.1
-  ocamlformat.0.21.0
+  dune.3.10.0
+  ocamlformat.0.25.1
   ppxlib.0.28.0
-  ppx_base.v0.15.0
+  ppx_base
   ppx_show
   ppx_inline_test
-  ppx_expect.v0.15.1
-  ppx_optcomp.v0.15.0
+  ppx_expect
+  ppx_optcomp
   ppx_assert
-  js_of_ocaml
-  js_of_ocaml-ppx
-  websocket-lwt-unix
-  lwt_ppx
+  odoc.2.2.1
   logger-p5
-  camlp5.8.00.05
-  GT
+  camlp5.8.02.01
+  pa_ppx
+  GT.0.5.2
   mtime.1.4.0
-  benchmark.1.6
+  benchmark
 "
 
-# curly is required for reviewer
+

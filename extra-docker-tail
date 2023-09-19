@@ -1,5 +1,7 @@
-# Next command is here to avoid the following error
-#   raco setup: docs failure: query-exec: unable to open the database file
-RUN sudo raco setup --doc-index --force-user-docs
-RUN raco pkg install benchmark pretty-format
-RUN raco pkg show
+RUN du -sh ~/.opam
+RUN find $(opam var bin) -iname '*.byte' -exec rm -fv {} \;
+RUN find $(opam var bin) -iname 'ocamlformat.parser_reconver.test*' -exec rm -f {} \;
+RUN find $(opam var lib) -iname '*.cmt' -exec rm -f {} \;
+RUN find $(opam var lib) -iname '*.cmti' -exec rm -f {} \;
+RUN find $(opam var prefix) -iname '*.exe' -exec strip {} \;
+RUN du -sh ~/.opam
