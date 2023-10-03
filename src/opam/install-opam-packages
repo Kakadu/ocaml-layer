@@ -6,5 +6,5 @@
 set -eu
 
 packages=$(echo $* | sed -e 's/,/ /g')
-opam install -y $packages
+opam install --confirm-level=unsafe-yes $packages
 opam clean -y

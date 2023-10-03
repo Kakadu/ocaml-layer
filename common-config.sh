@@ -10,7 +10,7 @@ extra_apk_packages="
 extra_deb_packages="
   nasm clang-14 curl ca-certificates
   autoconf cmake llvm-14-dev python3
-  adduser
+  adduser nasm gcc-12 binutils pkg-config
 "
 
 # The collection of opam packages we want to install. Go wild.
@@ -20,4 +20,7 @@ opam_packages="
   dune-site angstrom ppx_blob ppx_show llvm
   ppx_expect
   llvm.14.0.6
+  ctypes-foreign
+  odoc
+  bisect_ppx
 "
