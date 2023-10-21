@@ -11,7 +11,7 @@ extra_deb_packages="
   pkg-config
   rlwrap
   libgmp-dev
-  llvm-14 cmake libffi-dev llvm-14-dev
+  llvm-14 cmake libffi-dev llvm-14-dev clang-14
   autoconf
 "
 
