@@ -13,25 +13,24 @@ extra_deb_packages="
 
 # The collection of opam packages we want to install. Go wild.
 opam_packages="
-  dune.3.10.0
-  ocamlformat.0.26.0
+  dune.3.11.1
+  ocamlformat.0.26.1
 	ppxlib.0.30.0
 	bisect_ppx.2.8.3
-	sexplib
-	yojson
-	stdune
   odoc
+	sexplib
   base
+	stdune
   ppx_inline_test
   ppx_expect
   ppx_show
+  ppx_deriving
 	angstrom
   opal
   qcheck-core
-  ppx_deriving
-	stdune
 	sexplib
   curly
+	yojson
   zanuda
 "
 

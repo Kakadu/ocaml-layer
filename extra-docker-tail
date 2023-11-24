@@ -4,4 +4,8 @@ RUN npm install -g jscpd
 
 RUN echo "TODO add ppx_show as a dependecy for reviewer"
 RUN opam pin add reviewer https://github.com/Kakadu/zanuda.git --yes
+#RUN opam install reviewer --yes
+RUN opam pin add zanuda https://github.com/Kakadu/zanuda.git --yes
+#RUN opam install zanuda --yes
 RUN opam clean --yes
+
