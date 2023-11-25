@@ -8,16 +8,24 @@ extra_apk_packages="
 
 # Ubuntu
 extra_deb_packages="
-  pkg-config
-  rlwrap
-  libgmp-dev
-  llvm-14 cmake libffi-dev llvm-14-dev clang-14
-  autoconf
+  nasm python3 curl ca-certificates
+  autoconf cmake llvm-16-dev llvm-16-runtime clang-16
+  adduser nasm gcc-13 binutils pkg-config
+  libzstd-dev zlib1g-dev
 "
 
 # The collection of opam packages we want to install. Go wild.
 opam_packages="
-  dune.3.11.0
+  dune.3.11.1
+  ocamlformat.0.26.1
+  dune-site
+  angstrom
+  ppx_expect
+  llvm.16.0.6+nnp
+  ctypes-foreign
+  odoc
+  bisect_ppx
+  stdune
   ppxlib
   ppx_expect
   ppx_show
@@ -28,9 +36,9 @@ opam_packages="
   angstrom
   ctypes
   ctypes-foreign
-  llvm.14.0.6
   yojson
   curly
+  odoc
   parsexp.v0.16.0
   sexplib.v0.16.0
 "
