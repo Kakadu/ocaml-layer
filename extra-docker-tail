@@ -1,14 +1,12 @@
-RUN echo "Manual commands in the end"
-
 # Use the following to get a more compact image
-RUN du -sh ~/.opam
-RUN find $(opam var bin) -iname '*.byte' -exec rm -fv {} \;
-RUN find $(opam var bin) -iname 'ocamlformat.parser_recover.test*' -exec rm -f {} \;
-RUN find $(opam var lib) -iname '*.cmt' -exec rm -f {} \;
-RUN find $(opam var lib) -iname '*.cmti' -exec rm -f {} \;
-RUN find $(opam var prefix) -iname 'ppx.exe' -exec rm -f {} \;
-RUN find $(opam var prefix) -iname '*.exe' -exec strip {} \;
-RUN rm -fr $(opam var bin)/ocamldebug
-RUN rm -fr $(opam var bin)/ocamlformat-rpcq
-RUN find $(opam var lib)/stublibs -iname '*.so' -exec strip {} \;
-RUN du -sh ~/.opam
+RUN du -sh ~/.opam && \
+    find $(opam var bin) -iname '*.byte' -exec rm -fv {} \; && \
+    find $(opam var bin) -iname 'ocamlformat.parser_recover.test*' -exec rm -f {} \; && \
+    find $(opam var lib) -iname '*.cmt' -exec rm -f {} \; && \
+    find $(opam var lib) -iname '*.cmti' -exec rm -f {} \; && \
+    find $(opam var prefix) -iname 'ppx.exe' -exec rm -f {} \; && \
+    find $(opam var prefix) -iname '*.exe' -exec strip {} \; && \
+    rm -fr $(opam var bin)/ocamldebug && \
+    rm -fr $(opam var bin)/ocamlformat-rpcq && \
+    find $(opam var lib)/stublibs -iname '*.so' -exec strip {} \; && \
+    du -sh ~/.opam

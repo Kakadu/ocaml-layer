@@ -24,7 +24,7 @@ opam_packages="
   angstrom
   ppx_blob
   ppx_expect
-  llvm.16.0.6+nnp
+  llvm.14.0.6
   ctypes-foreign
   odoc
   bisect_ppx
