@@ -2,6 +2,16 @@ ocaml-layer
 ==
 [![CircleCI badge](https://circleci.com/gh/mjambon/ocaml-layer.svg?style=svg)](https://app.circleci.com/pipelines/github/mjambon/ocaml-layer)
 
+
+
+```
+✗ cat /etc/docker/daemon.json 
+{ 
+    "experimental": true 
+} 
+
+```
+
 Bring your team's OCaml CI jobs down to 1 min.
 
 Motivation

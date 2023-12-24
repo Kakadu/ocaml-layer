@@ -25,11 +25,11 @@ os="ubuntu"
 # by gpgv.
 #
 #
-from="ubuntu:23.04"
+from="ubuntu:23.10"
 
 # This is the argument of 'docker pull', 'docker push', etc. for the image
 # we are building.
-docker_url="kakadu18/ocaml:llvm14"
+docker_url="kakadu18/ocaml:comp2023"
 
 # User to create and use. If it already exists, we'll try to use it.
 user="user"
