@@ -29,7 +29,7 @@ from="ubuntu:23.10"
 
 # This is the argument of 'docker pull', 'docker push', etc. for the image
 # we are building.
-docker_url="kakadu18/ocaml:comp2023"
+docker_url="kakadu18/ocaml:sirius2023"
 
 # User to create and use. If it already exists, we'll try to use it.
 user="user"
