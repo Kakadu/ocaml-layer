@@ -8,23 +8,19 @@ extra_apk_packages="
 
 # Ubuntu
 extra_deb_packages="
-  nasm curl ca-certificates python3 python3-pip autoconf cmake
-  adduser nasm gcc-12 binutils pkg-config
-  ncdu file gcc-multilib
+  curl ca-certificates autoconf 
+  adduser binutils pkg-config
+  ncdu file
   libev-dev libgmp-dev xdot
+  python2 openjdk-8-jre
 "
 
 # The collection of opam packages we want to install. Go wild.
 opam_packages="
-  dune.3.12.1
-  ocamlformat.0.26.1
-  ppx_blob
-  ppx_expect
-  yojson
-  bisect_ppx
-  cohttp-lwt-unix
-  qcheck
-  opium
-  camlp5
-  GT
+  coq.8.4.6
+  lwt
+  bisect
+  xml-light.2.4
+  yojson.2.0.2
+  batteries.3.5.1
 "
