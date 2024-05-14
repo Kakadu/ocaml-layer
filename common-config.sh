@@ -24,7 +24,7 @@ opam_packages="
   ppxlib.0.26.0
   sexplib
   yojson
-  ppx_yojson_conv
+  ppx_yojson_conv.v0.15.1
   stdune
   ppx_show
   ppx_inline_test
@@ -37,6 +37,6 @@ opam_packages="
   logger-p5
   camlp5.8.00.05
   GT
-  mtime.1.4.0
+  mtime.2.0.0
   z3
 "
