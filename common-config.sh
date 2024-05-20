@@ -8,26 +8,20 @@ extra_apk_packages="
 
 # Ubuntu
 extra_deb_packages="
-  nasm curl ca-certificates python3 autoconf cmake
-  adduser nasm gcc-12 binutils pkg-config
-  clang-14 clang-16 llvm llvm-16 llvm-16-dev
+  curl ca-certificates python3 autoconf cmake
+  adduser binutils pkg-config
   ncdu file
 "
-# llvm provides opt
-# llvm-16 provides opt-16
 
 # The collection of opam packages we want to install. Go wild.
 opam_packages="
   dune.3.12.1
-  ocamlformat.0.26.1
-  dune-site
-  angstrom
-  ppx_blob
-  ppx_expect
-  llvm.16.0.6+nnp
-  ctypes-foreign
-  odoc
+  logger-p5
+  ocamlgraph
   bisect_ppx
-  ppx_deriving
-  ppx_show
+  yojson.2.1.2
+  ppx_inline_test
+  ppx_expect
+  benchmark
+  z3
 "
