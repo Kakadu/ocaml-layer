@@ -13,6 +13,7 @@ extra_deb_packages="
   libpcre3-dev
   xdot
   python3-distutils
+  autoconf
 "
 #libipc-system-simple-perl libstring-shellquote-perl python3 python3-distutils
 
@@ -32,6 +33,8 @@ opam_packages="
   ppx_assert
   js_of_ocaml
   js_of_ocaml-ppx
+  js_of_ocaml-lwt.5.0.1
+  react
   websocket-lwt-unix
   lwt_ppx
   logger-p5
