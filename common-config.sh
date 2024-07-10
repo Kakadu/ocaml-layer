@@ -24,4 +24,7 @@ opam_packages="
   ppx_expect
   benchmark
   z3
+  domainslib
+  progress
+  mtime.2.0.0
 "
