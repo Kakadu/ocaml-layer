@@ -21,6 +21,7 @@ packages="
   rsync
   m4
   sudo
+  adduser
   unzip
   $extra_packages
 "
