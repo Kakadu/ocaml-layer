@@ -8,3 +8,15 @@ RUN opam pin add zanuda https://github.com/Kakadu/zanuda.git --yes
 #RUN opam install zanuda --yes
 RUN opam clean --yes
 
+# Use the following to get a more compact image
+RUN du -sh ~/.opam
+RUN find $(opam var bin) -iname '*.byte' -exec rm -fv {} \;
+RUN find $(opam var bin) -iname 'ocamlformat.parser_recover.test*' -exec rm -f {} \;
+RUN find $(opam var lib) -iname '*.cmt' -exec rm -f {} \;
+RUN find $(opam var lib) -iname '*.cmti' -exec rm -f {} \;
+RUN find $(opam var prefix) -iname 'ppx.exe' -exec rm -f {} \;
+RUN find $(opam var prefix) -iname '*.exe' -exec strip {} \;
+RUN rm -fr $(opam var bin)/ocamldebug
+RUN rm -fr $(opam var bin)/ocamlformat-rpcq
+RUN find $(opam var lib)/stublibs -iname '*.so' -exec strip {} \;
+RUN du -sh ~/.opam
