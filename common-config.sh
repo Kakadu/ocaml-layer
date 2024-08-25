@@ -16,26 +16,27 @@ extra_deb_packages="
   xdot
   bc
   ncdu
+  m4
 "
 
 # The collection of opam packages we want to install. Go wild.
 opam_packages="
   ocamlfind
-  dune.3.10.0
-  ocamlformat.0.25.1
-  ppxlib.0.28.0
-  ppx_base
+  dune
+  ocamlformat.0.26.2
+  ppxlib.0.33.0
   ppx_show
   ppx_inline_test
   ppx_expect
   ppx_optcomp
   ppx_assert
-  odoc.2.2.1
+  bisect_ppx
+  odoc.2.4.2
   logger-p5
   camlp5.8.02.01
   pa_ppx
-  GT.0.5.2
-  mtime.1.4.0
+  GT.0.5.3
+  mtime.2.0.0
   benchmark
 "
 
