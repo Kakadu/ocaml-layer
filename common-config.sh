@@ -8,7 +8,7 @@ extra_apk_packages="
 
 # Ubuntu
 extra_deb_packages="
-  adduser python3 curl ca-certificates autoconf
+  adduser python-is-python3 python3 curl ca-certificates autoconf
   libzstd-dev zlib1g-dev
   cmake llvm-16-dev llvm-16-runtime clang-16
   nasm gcc-13 binutils pkg-config
@@ -24,6 +24,7 @@ opam_packages="
   llvm.16.0.6+nnp
   ctypes-foreign
   odoc
+  odig
   bisect_ppx
   stdune
   ppxlib
@@ -33,7 +34,7 @@ opam_packages="
   ppx_blob
   ppx_deriving
   bisect_ppx
-  angstrom.0.16.0
+  angstrom.0.16.1
   ctypes
   ctypes-foreign
   yojson
