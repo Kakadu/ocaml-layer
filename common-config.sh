@@ -26,7 +26,7 @@ opam_packages="
   ppx_expect
   ppx_show
   ppx_deriving
-  angstrom
+  angstrom.0.16.0
   opal
   qcheck-core
   sexplib
