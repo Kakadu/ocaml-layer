@@ -10,18 +10,18 @@ extra_apk_packages="
 extra_deb_packages="
   adduser python-is-python3 python3 curl ca-certificates autoconf
   libzstd-dev zlib1g-dev
-  cmake llvm-16-dev llvm-16-runtime clang-16
+  cmake llvm-17-dev llvm-17-runtime clang-17
   nasm gcc-13 binutils pkg-config
+  libcunit1-dev
 "
 
 # The collection of opam packages we want to install. Go wild.
 opam_packages="
-  dune.3.16.0
+  dune.3.17.2
   ocamlformat.0.26.2
   dune-site
   angstrom
-  ppx_expect
-  llvm.16.0.6+nnp
+  llvm.17.0.6
   ctypes-foreign
   odoc
   odig
@@ -34,12 +34,10 @@ opam_packages="
   ppx_blob
   ppx_deriving
   bisect_ppx
-  angstrom.0.16.1
+  angstrom.0.16.0
   ctypes
   ctypes-foreign
   yojson
-  curly
-  odoc
   parsexp.v0.16.0
   sexplib.v0.16.0
 "
