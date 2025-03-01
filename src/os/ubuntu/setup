@@ -8,6 +8,7 @@ set -eu
 # The command line arguments are a list of extra packages to install.
 extra_packages=$*
 
+dpkg --add-architecture i386
 apt-get update
 
 packages="

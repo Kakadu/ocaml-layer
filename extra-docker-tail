@@ -2,10 +2,6 @@
 #RUN npm config set prefix '~/.local/'
 #RUN npm install -g jscpd
 
-RUN opam pin add reviewer https://github.com/Kakadu/zanuda.git --yes
-#RUN opam install reviewer --yes
-RUN opam pin add zanuda https://github.com/Kakadu/zanuda.git --yes
-#RUN opam install zanuda --yes
 RUN opam clean --yes
 
 # Use the following to get a more compact image
