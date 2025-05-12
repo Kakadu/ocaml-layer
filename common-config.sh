@@ -8,17 +8,17 @@ extra_apk_packages="
 
 # Ubuntu
 extra_deb_packages="
-  pkg-config autoconf python-is-python3 gcc-i686-linux-gnu gcc-14-multilib xdot linux-libc-dev:i386
+  libpcre2-dev pkg-config autoconf python-is-python3 gcc-i686-linux-gnu gcc-14-multilib xdot linux-libc-dev:i386
 "
 
 # The collection of opam packages we want to install. Go wild.
 opam_packages="
   opam-depext
-  dune.3.17.2
+  dune.3.18.2
   ppxlib.0.32.1
   GT
-  ostap
+  ostap.0.6.1
   posix-uname
 "
 
-# curly is required for reviewer
+
