@@ -23,21 +23,38 @@ extra_deb_packages="
 opam_packages="
   ocamlfind
   dune
-  ocamlformat.0.26.2
-  ppxlib.0.33.0
-  ppx_show
-  ppx_inline_test
+  ocamlformat.0.27.0
+  zarith
+  bitv
+  zarith
+  iter
+  ounit2
   ppx_expect
-  ppx_optcomp
-  ppx_assert
+  ppx_inline_test
+  ppx_regexp
+  ppx_variants_conv
   bisect_ppx
-  odoc.2.4.2
-  logger-p5
-  camlp5.8.02.01
-  pa_ppx
-  GT.0.5.3
-  mtime.2.0.0
-  benchmark
+  odoc
+  
+	z3
+	cmdliner
+  dolmen
+  dolmen_loop
+  dolmen_model
+	angstrom.0.16.0
+	ppx_deriving
+	pp_loc
+	hc
+	ocaml_intrinsics
+	patricia-tree
+	prelude
+	rusage
+	scfg
+	yojson
+	zarith
+	mdx
+	spelll
+
 "
 
 
