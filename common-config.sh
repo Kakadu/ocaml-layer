@@ -30,13 +30,16 @@ opam_packages="
   ppx_expect
   ppx_optcomp
   ppx_assert
+  ppx_expect_nobase
   bisect_ppx
-  odoc.2.4.2
+  odoc.2.4.4
+  mdx
+  odig
   logger-p5
   camlp5.8.02.01
   pa_ppx
   GT.0.5.3
-  mtime.2.0.0
+  mtime.2.1.0
   benchmark
 "
 
