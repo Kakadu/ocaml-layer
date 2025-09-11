@@ -32,7 +32,6 @@ packages="
   m4
   nano
   ncurses-dev
-  opam
   openssl
   patch
   rsync
@@ -43,6 +42,8 @@ packages="
 "
 
 apk add --no-cache $packages
+
+sudo bash -c "yes '' | sh <(curl -fsSL https://opam.ocaml.org/install.sh)"
 
 if [ -z "$(git config user.email)" ]; then
   git config --global user.email "docker@example.com"
