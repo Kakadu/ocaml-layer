@@ -17,7 +17,6 @@ packages="
   curl
   git
   nano
-  opam
   rsync
   m4
   sudo
@@ -26,6 +25,8 @@ packages="
 "
 
 DEBIAN_FRONTEND=noninteractive apt-get install -y $packages --no-install-recommends
+
+sudo bash -c "yes '' | sh <(curl -fsSL https://opam.ocaml.org/install.sh)"
 
 if [ -z "$(git config user.email)" ]; then
   git config --global user.email "docker@example.com"
