@@ -16,10 +16,9 @@ extra_deb_packages="
 
 # The collection of opam packages we want to install. Go wild.
 opam_packages="
-  dune.3.17.2
+  dune.3.20.2
   ocamlformat.0.26.2
   dune-site
-  angstrom
   ppx_expect
   llvm.16.0.6+nnp
   ctypes-foreign
@@ -27,11 +26,10 @@ opam_packages="
   odig
   bisect_ppx
   stdune
-  ppxlib
+  ppxlib.0.35.0
   ppx_expect
   ppx_show
   ppx_inline_test
-  ppx_expect_nobase
   ppx_blob
   ppx_deriving
   qcheck
@@ -45,3 +43,5 @@ opam_packages="
   parsexp.v0.16.0
   sexplib.v0.16.0
 "
+#  ppx_deriving_qcheck.0.4.1
+
