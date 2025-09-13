@@ -17,6 +17,7 @@ extra_deb_packages="
   bc
   ncdu
   m4
+  wget
 "
 
 # The collection of opam packages we want to install. Go wild.
