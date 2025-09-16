@@ -1,7 +1,0 @@
-RUN du -sh ~/.opam
-RUN find $(opam var bin) -iname '*.byte' -exec rm -fv {} \;
-RUN find $(opam var bin) -iname 'ocamlformat.parser_reconver.test*' -exec rm -f {} \;
-RUN find $(opam var lib) -iname '*.cmt' -o -iname '*.cmti' -exec rm -f {} \;
-RUN find $(opam var prefix) -iname '*.exe' -exec strip {} \;
-RUN du -sh ~/.opam
-
