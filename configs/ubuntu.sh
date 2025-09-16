@@ -29,7 +29,7 @@ from="ubuntu:24.04"
 
 # This is the argument of 'docker pull', 'docker push', etc. for the image
 # we are building.
-docker_url="kakadu18/ocaml:llvm16"
+docker_url="kakadu18/ocaml:comp25"
 
 # User to create and use. If it already exists, we'll try to use it.
 user="opam"

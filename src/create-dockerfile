@@ -86,6 +86,7 @@ no_from=false
 create_user=''
 dockerfile=''
 extra_packages="$default_extra_packages"
+extra_docker_tail=''
 force_tag=''
 opam_packages="$default_opam_packages"
 opam_switch="$default_opam_switch"
@@ -142,6 +143,10 @@ while [[ $# -gt 0 ]]; do
     ;;
     --opam-switch-options)
       opam_switch_options=$(echo $2)
+      shift
+    ;;
+    --extra-docker-tail)
+      extra_docker_tail=$(echo $2)
       shift
     ;;
     --os)
@@ -242,3 +247,10 @@ EXPOSE 7777
 
 RUN /home/opam/postinstall.sh
 EOF
+
+if [ -z "$extra_docker_tail" ]; then
+	echo "No extra docker contents specified" 1>&2
+else
+  cat "$extra_docker_tail" >> $dockerfile
+fi
+

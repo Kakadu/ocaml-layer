@@ -22,6 +22,9 @@ opam init --disable-sandboxing --bare
 echo "Building OCaml compilers"
 opam switch create "$@"
 
+#echo "Add archive repo"
+#opam repo add archive git+https://github.com/ocaml/opam-repository-archive --all-switches
+
 
 cat >> ~/.bashrc <<"EOF"
 # From https://github.com/mjambon/ocaml-layer
