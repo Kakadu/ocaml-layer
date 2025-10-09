@@ -24,6 +24,7 @@ opam_packages="
   dune-build-info
   odoc
   odig
+	angstrom.0.16.0
   bisect_ppx
   ppxlib
   ppx_blob
@@ -33,7 +34,6 @@ opam_packages="
   ppx_expect_nobase.v0.17.2.2
   ppx_fields_conv
   ppx_inline_test
-  ppx_blob
   menhir
   angstrom.0.16.0
   curly
