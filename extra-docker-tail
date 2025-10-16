@@ -5,3 +5,9 @@ RUN find $(opam var lib) -iname '*.cmt' -exec rm -f {} \;
 RUN find $(opam var lib) -iname '*.cmti' -exec rm -f {} \;
 RUN find $(opam var prefix) -iname '*.exe' -exec strip {} \;
 RUN du -sh ~/.opam
+
+
+RUN cd ~ && git clone https://github.com/Chrobelias/Chrobelias.git --recursive
+RUN cd ~/Chrobelias && opam install . --deps-only --yes
+RUN cd ~/Chrobelias && opam exec -- dune test tests --profile=release
+RUN cd ~/Chrobelias && opam exec -- make make_bench_scripts
