@@ -240,6 +240,8 @@ RUN $(multiline ./.ocaml-setup/opam/install-opam-packages $opam_packages)
 $([[ "$no_cmd" = true ]] || (echo; echo "CMD $cmd") )
 
 COPY Dockerfile /Dockerfile
+COPY postinstall.sh /home/opam/postinstall.sh
+RUN /home/opam/postinstall.sh
 EOF
 
 if [ -z "$extra_docker_tail" ]; then
