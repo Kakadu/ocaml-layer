@@ -17,7 +17,7 @@ extra_deb_packages="
 
 # The collection of opam packages we want to install. Go wild.
 opam_packages="
-  dune.3.19.1
+  dune.3.21.0
   ocamlformat.0.27.0
   dune-site
   ppx_expect
@@ -44,4 +44,5 @@ opam_packages="
   sexplib.v0.16.0
   ppx_expect_nobase.v0.17.2.2
   mtime.2.1.0
+  ocaml-manual
 "
