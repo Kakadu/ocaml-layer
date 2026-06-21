@@ -66,6 +66,11 @@ build() {
       extra_build_options+=( -t "$url" )
     done
 
+    echo "$docker_url" >> "$pushme"
+    for url in "${extra_docker_urls[@]}"; do
+      echo "$url" >> "$pushme"
+    done
+
     if [[ -e ./postinstall.sh ]]; then
       pwd
       cp ./postinstall.sh tmp -vi
@@ -85,13 +90,11 @@ build() {
       docker build -t "$docker_url" "${extra_build_options[@]}" .
 
       # Sanity check.
+      docker run -t "$docker_url" opam exec -- sh -c "echo 'opam: ' $(opam --version)"
       docker run -t "$docker_url" opam exec -- ocamlc -v
+      docker run -t "$docker_url" opam exec -- du -sh /home/opam/.opam
     )
 
-    echo "$docker_url" >> "$pushme"
-    for url in "${extra_docker_urls[@]}"; do
-      echo "$url" >> "$pushme"
-    done
   )
 }
 

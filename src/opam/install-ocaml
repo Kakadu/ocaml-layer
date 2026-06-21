@@ -17,7 +17,7 @@ echo -n "opam version: "
 opam --version
 
 echo "Initializing opam"
-opam init --disable-sandboxing --bare
+opam init --disable-sandboxing
 
 echo "Building OCaml compilers"
 opam switch create "$@"
@@ -27,12 +27,14 @@ opam switch create "$@"
 
 
 cat >> ~/.bashrc <<"EOF"
-# From https://github.com/mjambon/ocaml-layer
-echo 'Не забывайте либо запустить "eval $(opam env)", Что инициализирует пути и другие переменные.'
-echo 'Или запускать все команды приписывая спереди opam exec --. '
-echo "Например:"
-echo '  opam exec -- COMMAND'
-echo ''
-echo
-eval $(opam env)
+du -sh ~/.opam
 EOF
+# # From https://github.com/mjambon/ocaml-layer
+# echo 'Не забывайте либо запустить "eval $(opam env)", Что инициализирует пути и другие переменные.'
+# echo 'Или запускать все команды приписывая спереди opam exec --. '
+# echo "Например:"
+# echo '  opam exec -- COMMAND'
+# echo ''
+# echo
+# eval $(opam env)
+# EOF

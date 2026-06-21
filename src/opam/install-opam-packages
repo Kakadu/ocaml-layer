@@ -6,7 +6,22 @@
 set -eu
 
 packages=$(echo $* | sed -e 's/,/ /g')
-#opam --version
-#opam install -y $packages --depext-only &&
+opam --version
+
+opam install -y $packages --download-only
 opam install -y $packages
 opam clean -y
+find $(opam var bin) -iname '*.byte' -exec rm -fv {} \;
+find $(opam var bin) -iname 'ocamlformat.parser_reconver.test*' -delete
+find $(opam var lib) \( -iname '*.cmt' -o -iname '*.cmti' \) -delete
+find $(opam var lib) \( -iname 'ppx.exe'  \) -delete
+find $(opam var prefix) -iname '*.exe' -exec strip {} \;
+find $(opam var bin)  -exec strip {} \;
+rm -fv $(opam var bin)/ppx-base
+rm -fv $(opam var bin)/gh-pages-amend
+rm -fv $(opam var bin)/ocamldebug $(opam var bin)/ocamlcmt  $(opam var bin)/ocaml-syntax-shims  $(opam var bin)/ocamlprof.opt  $(opam var bin)/ocamloptp.opt  $(opam var bin)/ocamlcp.opt  $(opam var bin)/ocaml-crunch  $(opam var bin)/ocamlrund  $(opam var bin)/ocamlruni
+rm -fv $(opam var bin)/ocp-indent  $(opam var bin)/ocp-indent-gen-rules
+rm -fv $(opam var bin)/b0
+rm -fv $(opam var bin)/b00-*
+
+#timeout 2 opam repo set-url default https://opam.ocaml.org  || echo "silence warning"

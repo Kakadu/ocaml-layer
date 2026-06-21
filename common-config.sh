@@ -10,13 +10,16 @@ extra_apk_packages="
 extra_deb_packages="
   adduser python-is-python3 python3 curl ca-certificates autoconf
   libzstd-dev zlib1g-dev
-  pkg-config
+  pkg-config automake autoconf libtool
+  ncdu time
 "
 
 # The collection of opam packages we want to install. Go wild.
 opam_packages="
-  dune.3.20.2
+  dune.3.23.1
+  stdcompat.20.0
   yojson
+  jsonschema
   sexplib
   dune-build-info
   odoc
