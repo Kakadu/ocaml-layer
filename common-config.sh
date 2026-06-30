@@ -17,7 +17,6 @@ extra_deb_packages="
 # The collection of opam packages we want to install. Go wild.
 opam_packages="
   dune.3.23.1
-  stdcompat.20.0
   yojson
   jsonschema
   sexplib
@@ -25,18 +24,18 @@ opam_packages="
   odoc
   odig
 	angstrom.0.16.0
-  bisect_ppx
+  #bisect_ppx
   ppxlib
   ppx_blob
   ppx_show
   ppx_deriving
   ppx_expect
-  ppx_expect_nobase.v0.17.2.2
+  ppx_expect_nobase.0.17.3.1
   ppx_fields_conv
   ppx_inline_test
   menhir
   angstrom.0.16.0
   curly
-  ocamlformat.0.27.0
+  ocamlformat
   ocaml-syntax-shims
 "

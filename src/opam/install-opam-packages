@@ -3,10 +3,16 @@
 # Install opam packages specified on the command line.
 # From https://github.com/mjambon/setup-ocaml
 #
-set -eu
+set -eux
 
 packages=$(echo $* | sed -e 's/,/ /g')
 opam --version
+
+#opam update -y
+#opam show ppx_expect_nobase
+
+#export OPAMIGNORECONSTRAINTS=stdcompat
+#opam pin add stdcompat https://github.com/anmonteiro/stdcompat.git\#ocaml-5.4 -y -n --debug
 
 opam install -y $packages --download-only
 opam install -y $packages
@@ -24,4 +30,4 @@ rm -fv $(opam var bin)/ocp-indent  $(opam var bin)/ocp-indent-gen-rules
 rm -fv $(opam var bin)/b0
 rm -fv $(opam var bin)/b00-*
 
-#timeout 2 opam repo set-url default https://opam.ocaml.org  || echo "silence warning"
+timeout 2 opam repo set-url default https://opam.ocaml.org  || echo "silence warning"
