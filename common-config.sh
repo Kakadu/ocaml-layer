@@ -27,7 +27,7 @@ opam_packages="
   #bisect_ppx
   ppxlib
   ppx_blob
-  ppx_show
+  #ppx_show
   ppx_deriving
   ppx_expect
   ppx_expect_nobase.0.17.3.1
