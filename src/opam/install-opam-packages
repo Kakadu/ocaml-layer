@@ -29,4 +29,3 @@ rm -fv $(opam var bin)/b00-*
 
 opam repo remove default --all
 timeout 5 opam repo add default https://opam.ocaml.org --all || echo "silence warning"
-
