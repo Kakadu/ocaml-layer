@@ -242,8 +242,8 @@ $([[ "$no_cmd" = true ]] || (echo; echo "CMD $cmd") )
 COPY Dockerfile /Dockerfile
 COPY postinstall.sh /home/opam/postinstall.sh
 
-EXPOSE 8888
-EXPOSE 7777
+#EXPOSE 8888
+#EXPOSE 7777
 
 RUN /home/opam/postinstall.sh
 EOF

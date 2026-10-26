@@ -28,6 +28,14 @@ packages="
 DEBIAN_FRONTEND=noninteractive apt-get install -y $packages --no-install-recommends
 DEBIAN_FRONTEND=noninteractive apt-get clean -y
 
+sudo rm -fr /usr/lib/llvm-18/lib/libLLVMAMDGPUCodeGen.a
+sudo rm -fr /usr/lib/llvm-18/lib/libLLVMAArch64CodeGen.a
+sudo rm -fr /usr/lib/llvm-18/lib/libLLVMHexagonCodeGen.a
+sudo rm -fr /usr/lib/llvm-18/bin/llvm-exegesis
+sudo rm -fr /usr/lib/llvm-18/bin/obj2yaml
+sudo rm -fr /usr/lib/llvm-18/bin/yaml2obj
+
+
 if [ -z "$(git config user.email)" ]; then
   git config --global user.email "docker@example.com"
   git config --global user.name "Docker"

@@ -17,13 +17,18 @@ echo -n "opam version: "
 opam --version
 
 echo "Initializing opam"
-opam init --disable-sandboxing --bare https://se.math.spbu.ru/opam
+opam init --disable-sandboxing #--bare https://se.math.spbu.ru/opam
 
 echo "Building OCaml compilers"
 opam switch create "$@"
 
 #echo "Add archive repo"
 #opam repo add archive git+https://github.com/ocaml/opam-repository-archive --all-switches
+
+rm -fr $(opam var lib)/libcamlrund.a
+rm -fr $(opam var lib)/libasmrund.a
+rm -fr $(opam var lib)/libcamlruni.a
+rm -fr $(opam var lib)/libasmruni.a
 
 cat >> ~/.bashrc <<"EOF"
 du -sh ~/.opam
