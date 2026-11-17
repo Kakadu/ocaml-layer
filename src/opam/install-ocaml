@@ -17,7 +17,7 @@ echo -n "opam version: "
 opam --version
 
 echo "Initializing opam"
-opam init --disable-sandboxing --bare https://se.math.spbu.ru/opam
+opam init --disable-sandboxing --bare #https://se.math.spbu.ru/opam
 
 echo "Building OCaml compilers"
 opam switch create "$@"

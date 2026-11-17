@@ -27,5 +27,5 @@ rm -fv $(opam var bin)/ocp-indent  $(opam var bin)/ocp-indent-gen-rules
 rm -fv $(opam var bin)/b0
 rm -fv $(opam var bin)/b00-*
 
-opam repo remove default --all
-timeout 5 opam repo add default https://opam.ocaml.org --all || echo "silence warning"
+#opam repo remove default --all
+#timeout 5 opam repo add default https://opam.ocaml.org --all || echo "silence warning"
